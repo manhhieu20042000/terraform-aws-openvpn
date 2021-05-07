@@ -37,10 +37,10 @@ resource "aws_autoscaling_group" "ecs" {
 
   tags = [
     tomap({ 
-      "key": "Name",
-      "value": "ecs-node-${var.name}",
-      "propagate_at_launch": true
-    });
+      "key" = "Name",
+      "value" = "ecs-node-${var.name}",
+      "propagate_at_launch" = true
+    })
   ]
 
   target_group_arns         = var.target_group_arns
